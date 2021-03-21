@@ -1,0 +1,82 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    direction: rtl;
+    font-family: iransans;
+}
+
+.story-guid li {
+    font-size: 22px;
+    color: brown;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px 0px;
+    position: relative;
+    padding: 0px 25px 0px 0px;
+}
+
+.story-guid li::before {
+    content: "~";
+    position: absolute;
+    right: 0px;
+    color: black;
+    width: 20px;
+    height: 20px;
+}
+
+.story-guid-area {
+    padding: 10px 50px 10px 0px;
+    transition: 0.7s all;
+    background-color: #eee;
+    margin: 15px 0px;
+}
+
+.story-guid-btn {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.story-guid {
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.5s max-height;
+    position: relative;
+}
+
+.story-guid-area ul.storyguidetoggle {
+    max-height: 500px;
+    margin: 10px 0px;
+}
+
+.story-guid::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    background-color: #888888;
+    height: 100%;
+    right: 0;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        width: 90%;
+    }
+    .story-guid-area {
+        padding: 10px 20px 10px 0px;
+    }
+}
